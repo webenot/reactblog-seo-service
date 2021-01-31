@@ -2,7 +2,7 @@
   "name": "@reactblog/seo-service",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm-run-all -l -p watch run",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/webenot/reactblog-seo-service#readme",
   "devDependencies": {
     "@types/node": "^14.14.22",
+    "@types/uuid": "^8.3.0",
     "@types/webpack": "^4.41.26",
     "@types/webpack-node-externals": "^2.5.0",
     "nodemon": "^2.0.7",
@@ -32,5 +33,10 @@
     "webpack": "^5.19.0",
     "webpack-cli": "^4.4.0",
     "webpack-node-externals": "^2.5.2"
+  },
+  "dependencies": {
+    "class-validator": "^0.13.1",
+    "reflect-metadata": "^0.1.13",
+    "uuid": "^8.3.2"
   }
 }
