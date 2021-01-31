@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all -l -p watch run",
+    "watch": "webpack --watch --progress",
+    "run": "nodemon ./dist/server.js ./dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,19 @@
   "bugs": {
     "url": "https://github.com/webenot/reactblog-seo-service/issues"
   },
-  "homepage": "https://github.com/webenot/reactblog-seo-service#readme"
+  "homepage": "https://github.com/webenot/reactblog-seo-service#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "@types/webpack": "^4.41.26",
+    "@types/webpack-node-externals": "^2.5.0",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "ts-loader": "^8.0.14",
+    "ts-node": "^9.1.1",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "typescript": "^4.1.3",
+    "webpack": "^5.19.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-node-externals": "^2.5.2"
+  }
 }
