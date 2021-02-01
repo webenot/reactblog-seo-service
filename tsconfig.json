@@ -23,12 +23,6 @@
       ],
       "@reactblog/ui/*": [
         "../reactblog-ui/src/*"
-      ],
-      "Application/*": [
-        "../reactblog-web/src/application/*"
-      ],
-      "Services/*": [
-        "../reactblog-web/src/application/services/*"
       ]
     },
     "allowSyntheticDefaultImports": true,

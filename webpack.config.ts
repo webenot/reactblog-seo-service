@@ -8,7 +8,7 @@ export const ROOT_PATH = __dirname;
 
 const DIST_PATH = path.resolve(__dirname, 'dist');
 const SRC_PATH = path.resolve(__dirname, 'src');
-const LIBS_PATH = path.resolve(__dirname, '../');
+const LIBS_PATH = path.resolve(__dirname, '..');
 
 export const NODE_ENV = process.env.NODE_ENV || 'development';
 export const PORT = parseInt(process.env.PORT || '8017', 0);
@@ -18,6 +18,9 @@ const config = {
   context: SRC_PATH,
   mode: NODE_ENV,
   watch: NODE_ENV === 'development',
+  watchOptions: {
+    poll: true,
+  },
   module: {
     // @ts-ignore
     rules: [],
@@ -46,8 +49,6 @@ const config = {
       '@reactblog/core': path.resolve(LIBS_PATH, 'reactblog-core', 'src'),
       '@reactblog/ui': path.resolve(LIBS_PATH, 'reactblog-ui', 'src'),
       '@reactblog/node': path.resolve(LIBS_PATH, 'reactblog-node', 'src'),
-      'Application': path.resolve(LIBS_PATH, 'reactblog-web', 'src', 'application'),
-      'Services': path.resolve(LIBS_PATH, 'reactblog-web', 'src', 'application', 'services'),
     },
     plugins: [
       new TsconfigPathsPlugin(),

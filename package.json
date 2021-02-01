@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm-run-all -l -p watch run",
-    "watch": "webpack --watch --progress",
+    "watch": "webpack --watch",
     "run": "nodemon ./dist/server.js ./dist/server.js"
   },
   "repository": {
